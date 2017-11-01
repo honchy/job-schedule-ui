@@ -7,7 +7,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 module.exports = {
 	entry: {
-		main: './src/pages/JobAdmin/index.js'
+		main: './src/pages/index.js'
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
@@ -27,7 +27,7 @@ module.exports = {
 				test: /\.css$/i,
 				use: ExtractTextPlugin.extract({
 					fallback: "style-loader",
-			        use: "css-loader!postcss-loader"
+			        use: "css-loader?importLoader=1&modules&localIdentName=[folder]_[local]_[sha512:hash:base62:5]!postcss-loader"
 				})
 			}
 		]

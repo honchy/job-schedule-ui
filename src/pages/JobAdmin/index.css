@@ -1,0 +1,8 @@
+.hello {
+	border: 1px solid gray;
+	background-color: white;
+	padding: 10em;
+	text-align: center;
+	font-size: 48px;
+	display: flex;
+}

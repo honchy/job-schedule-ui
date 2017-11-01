@@ -7,7 +7,8 @@
 	  	["react-css-modules", {
 	  		"exclude": "node_modules",
 	  		"webpackHotModuleReloading": true,
-	  		"handleMissingStyleName": "warn"
+	  		"handleMissingStyleName": "warn",
+	  		"generateScopedName": "[folder]_[local]_[sha512:hash:base62:5]"
 	  	}]
 	]
 }
