@@ -1,8 +1,27 @@
-.hello {
-	border: 1px solid gray;
-	background-color: white;
-	padding: 10em;
-	text-align: center;
-	font-size: 48px;
+.table {
+	
+}
+
+.table-header {
+	height: 44px;
+	line-height: 44px;
+	font-weight: 500;
+}
+.table-body {
+	overflow: scroll;
+}
+.list {
+	height: auto;
+}
+.item {
+	height: 66px;
+	line-height: 66px;
 	display: flex;
+
+	&:nth-child(even) {
+		background-color: #ccc;
+	};
+}
+.port {
+	text-align: center;
 }

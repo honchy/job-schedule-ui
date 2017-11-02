@@ -5,11 +5,11 @@ import AppSideMenu from '$components/AppSideMenu'
 import './index.css'
 
 export default function App(props) {
-	return <div styleName="app">
+	return <div className="flexbox flex-column" styleName="app">
 		<AppBar />
-		<div styleName="cont">
+		<div styleName="cont" className="flex flexbox">
 			<AppSideMenu />
-			<div styleName="page-cont">{ props.children }</div>
+			<div styleName="panel" className="flex flexbox flex-column">{ props.children }</div>
 		</div>
 	</div>
 }
