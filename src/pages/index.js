@@ -1,10 +1,16 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-import JobAdmin from './JobAdmin/index.js'
+import { Provider } from 'mobx-react'
+import JobAdmin from './JobAdmin'
+import AppModel from '$models/appModel'
+import App from '$components/App'
+
 import './index.css'
 
-const AppRoot = <JobAdmin />
-
-console.log(document.querySelector('.app-root'))
+const AppRoot = <Provider model={ new AppModel }>
+	<App>
+		<JobAdmin />
+	</App>
+</Provider>
 
 ReactDom.render(AppRoot, document.querySelector('.app-root'))

@@ -1,0 +1,16 @@
+.menu {
+	width: 120px;
+}
+
+.item {
+	font-size: 16px;
+	line-height: 44px;
+	height: 44px;
+	text-align: center;
+
+	border-top: 1px solid #ccc;
+}
+
+.item:last-child {
+	border-bottom: 1px solid #ccc;
+}

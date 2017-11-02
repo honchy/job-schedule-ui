@@ -4,7 +4,6 @@ var CleanWebpackPlugin = require('clean-webpack-plugin')
 var webpack = require('webpack')
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
 
-
 module.exports = {
 	entry: {
 		main: './src/pages/index.js'
@@ -18,23 +17,24 @@ module.exports = {
 			{
 				test:/\.js$/i,
 				exclude: /node_modules/i,
-				loader: "babel-loader",
-				options: {
-					presets: ['env', 'react']
-				}
+				loader: "babel-loader"
 			},
 			{
 				test: /\.css$/i,
-				use: ExtractTextPlugin.extract({
-					fallback: "style-loader",
-			        use: "css-loader?importLoader=1&modules&localIdentName=[folder]_[local]_[sha512:hash:base62:5]!postcss-loader"
-				})
+				// development
+				loaders: "style-loader!css-loader?importLoader=1&modules&localIdentName=[folder]_[local]_[sha512:hash:base62:5]!postcss-loader"
+				// production
+				// use: ExtractTextPlugin.extract({
+				// 	fallback: "style-loader",
+			 //        use: "css-loader?importLoader=1&modules&localIdentName=[folder]_[local]_[sha512:hash:base62:5]!postcss-loader"
+				// })
 			}
 		]
 	},
 	resolve: {
 		alias: {
-			"$models": "./src/models"
+			"$models": path.resolve(__dirname, "src/models"),
+			"$components": path.resolve(__dirname, "src/components")
 		}
 	},
 	devServer: {
