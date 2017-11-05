@@ -10,14 +10,14 @@ import "./index.css"
 
 @inject("model")
 @observer
-export default class JobAdmin extends Component {
+export default class JobInfo extends Component {
 	constructor(props) {
 		super(props)
 
 		this.renderRow = this.renderRow.bind(this)
 	}
 	componentDidMount() {
-		this.props.model.queryApplications()
+		this.props.model.query()
 	}
 	renderRow(item) {
 		return <div  styleName="item" key={ item.app_name }>

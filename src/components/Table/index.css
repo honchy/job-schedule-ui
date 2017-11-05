@@ -1,0 +1,13 @@
+.table {
+	
+}
+
+.table-header {
+	height: 44px;
+	line-height: 44px;
+	font-weight: 500;
+}
+
+.table-body {
+	overflow: scroll;
+}

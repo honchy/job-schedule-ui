@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDom from 'react-dom'
 import { Provider } from 'mobx-react'
 import JobAdmin from './JobAdmin'
+import JobInfo from './JobInfo'
 import AppModel from '$models/appModel'
 import App from '$components/App'
 

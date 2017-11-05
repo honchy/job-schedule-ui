@@ -1,0 +1,16 @@
+.panel {
+
+	.panel-header {
+		height: 44px;
+		line-height: 44px;
+	}
+
+	.panel-body {
+
+	}
+
+	.panel-footer {
+		height: 44px;
+		line-height: 44px;
+	}
+}

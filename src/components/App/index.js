@@ -1,15 +1,16 @@
 import React from 'react'
+import View from '$components/View'
 import AppBar from '$components/AppBar'
 import AppSideMenu from '$components/AppSideMenu'
 
 import './index.css'
 
 export default function App(props) {
-	return <div className="flexbox flex-column" styleName="app">
+	return <View styleName="app">
 		<AppBar />
-		<div styleName="cont" className="flex flexbox">
+		<View styleName="cont" direction="|">
 			<AppSideMenu />
-			<div styleName="panel" className="flex flexbox flex-column">{ props.children }</div>
-		</div>
-	</div>
+			<View styleName="panel">{ props.children }</View>
+		</View>
+	</View>
 }
